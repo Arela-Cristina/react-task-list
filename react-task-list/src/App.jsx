@@ -24,8 +24,8 @@ function App() {
         <div>
           <div>
             {pendientTask.map((task) => (
-              <div key={task.id}>
-                <div>
+              <div className="mainTaskContainer" key={task.id}>
+                <div className="taskContainer">
                   <div>{task.title} </div>
                   <div>Priority: {task.priority} </div>
                   <div>Estimated Time: {task.estimatedTime} </div>
@@ -38,12 +38,12 @@ function App() {
       </section>
 
       <section>
-        <h3>Ccompeted Task {completedTask.length}</h3>
+        <h3>Competed Task {completedTask.length}</h3>
         <div>
           <div>
             {completedTask.map((task) => (
-              <div key={task.id}>
-                <div>
+              <div className="mainTaskContainer" key={task.id}>
+                <div className="taskContainer">
                   <div>{task.title} </div>
                   <div>Priority: {task.priority} </div>
                   <div>Estimated Time: {task.estimatedTime} </div>
