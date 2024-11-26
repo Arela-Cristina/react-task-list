@@ -7,8 +7,8 @@ function App() {
   const [count, setCount] = useState(0);
 
   console.log(tasksArray);
-  const currentTask = tasksArray.slice(0, 3);
-  const completeTask = tasksArray.slice(3);
+  const currentTask = tasksArray.slice(0, 4);
+  const completeTask = tasksArray.slice(4);
 
   return (
     <>
@@ -18,18 +18,38 @@ function App() {
       </header>
 
       <section>
-        <h3>Current Task 4</h3>
+        <h3>Current Task {currentTask.length}</h3>
         <div>
           <div>
-            {tasksArray.map((task) => (
+            {currentTask.map((task) => (
               <div key={task.id}>
-                <div>{task.title} </div>
-                <div>Priority: {task.priority} </div>
-                <div>Estimated Time: {task.estimatedTime} </div>
+                <div>
+                  <div>{task.title} </div>
+                  <div>Priority: {task.priority} </div>
+                  <div>Estimated Time: {task.estimatedTime} </div>
+                </div>
+                <button>{task.state}</button>
               </div>
             ))}
           </div>
-          <div>{/* boton */}</div>
+        </div>
+      </section>
+
+      <section>
+        <h3> Completed Task {completeTask.length}</h3>
+        <div>
+          <div>
+            {completeTask.map((task) => (
+              <div key={task.id}>
+                <div>
+                  <div>{task.title} </div>
+                  <div>Priority: {task.priority} </div>
+                  <div>Estimated Time: {task.estimatedTime} </div>
+                </div>
+                <button>{task.state}</button>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </>
