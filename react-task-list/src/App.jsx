@@ -7,8 +7,10 @@ function App() {
   const [count, setCount] = useState(0);
 
   console.log(tasksArray);
-  const currentTask = tasksArray.slice(0, 4);
-  const completeTask = tasksArray.slice(4);
+  const completedTask = tasksArray.filter((task) => task.state === "completed");
+  const pendientTask = tasksArray.filter(
+    (task) => task.state === "backlog" || task.state === "in_progress"
+  );
 
   return (
     <>
@@ -18,10 +20,10 @@ function App() {
       </header>
 
       <section>
-        <h3>Current Task {currentTask.length}</h3>
+        <h3> Pendient Task {pendientTask.length}</h3>
         <div>
           <div>
-            {currentTask.map((task) => (
+            {pendientTask.map((task) => (
               <div key={task.id}>
                 <div>
                   <div>{task.title} </div>
@@ -36,10 +38,10 @@ function App() {
       </section>
 
       <section>
-        <h3> Completed Task {completeTask.length}</h3>
+        <h3>Ccompeted Task {completedTask.length}</h3>
         <div>
           <div>
-            {completeTask.map((task) => (
+            {completedTask.map((task) => (
               <div key={task.id}>
                 <div>
                   <div>{task.title} </div>
