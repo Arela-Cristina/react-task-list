@@ -1,6 +1,7 @@
 import { useState } from "react";
 import viteLogo from "/vite.svg";
 import tasksArray from "../src/assets/tasks.js";
+import functions from "../src/assets/functions.js";
 import "./App.css";
 
 function App() {
