@@ -19,9 +19,13 @@ function App() {
         <h3>Current Task 4</h3>
         <div>
           <div>
-            {/* Task */}
-            {/* priority */}
-            {/* Est time */}
+            {tasksArray.map((task) => (
+              <div key={task.id}>
+                <div>{task.title} </div>
+                <div>Priority: {task.priority} </div>
+                <div>Estimated Time: {task.estimatedTime} </div>
+              </div>
+            ))}
           </div>
           <div>{/* boton */}</div>
         </div>
