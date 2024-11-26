@@ -1,9 +1,9 @@
-function getButtonColor(state) {
+export function getButtonColor(state) {
   return state === "completed" 
-    ? "green"
-    : state === "in_progress"
     ? "orange"
+    : state === "in_progress"
+    ? "pink"
     : "red";
 }
 
-export default functions;
+// export default functions;
