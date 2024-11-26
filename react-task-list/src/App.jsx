@@ -45,7 +45,7 @@ function App() {
             {completedTask.map((task) => (
               <div className="mainTaskContainer" key={task.id}>
                 <div className="taskContainer">
-                  <div>{task.title} </div>
+                  <div style={{ fontWeight: 600 }}>{task.title} </div>
                   <div>Priority: {task.priority} </div>
                   <div>Estimated Time: {task.estimatedTime} </div>
                 </div>
