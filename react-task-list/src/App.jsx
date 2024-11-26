@@ -7,6 +7,8 @@ function App() {
   const [count, setCount] = useState(0);
 
   console.log(tasksArray);
+  const currentTask = tasksArray.slice(0, 3);
+  const completeTask = tasksArray.slice(3);
 
   return (
     <>
