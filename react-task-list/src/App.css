@@ -43,3 +43,9 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.line {
+  border-top: 2px solid #ccc;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}

@@ -38,6 +38,8 @@ function App() {
         </div>
       </section>
 
+      <div className="line"></div>
+
       <section>
         <h3>Competed Task {completedTask.length}</h3>
         <div>
