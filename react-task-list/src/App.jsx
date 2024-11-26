@@ -1,12 +1,10 @@
 import { useState } from "react";
 import viteLogo from "/vite.svg";
 import tasksArray from "../src/assets/tasks.js";
-import functions from "../src/assets/functions.js";
+import { getButtonColor } from "../src/assets/functions.js";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   console.log(tasksArray);
   const completedTask = tasksArray.filter((task) => task.state === "completed");
   const pendientTask = tasksArray.filter(
@@ -31,7 +29,9 @@ function App() {
                   <div>Priority: {task.priority} </div>
                   <div>Estimated Time: {task.estimatedTime} </div>
                 </div>
-                <button>{task.state}</button>
+                <button style={{ backgroundColor: getButtonColor(task.state) }}>
+                  {task.state}
+                </button>
               </div>
             ))}
           </div>
@@ -49,7 +49,9 @@ function App() {
                   <div>Priority: {task.priority} </div>
                   <div>Estimated Time: {task.estimatedTime} </div>
                 </div>
-                <button>{task.state}</button>
+                <button style={{ backgroundColor: getButtonColor(task.state) }}>
+                  {task.state}
+                </button>
               </div>
             ))}
           </div>
