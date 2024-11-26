@@ -16,7 +16,7 @@ function App() {
     <>
       {/* prova */}
       <header>
-        <h1>Task Manager</h1>
+        <h2 className="title">Task Manager</h2>
       </header>
 
       <section>
@@ -26,7 +26,7 @@ function App() {
             {pendientTask.map((task) => (
               <div className="mainTaskContainer" key={task.id}>
                 <div className="taskContainer">
-                  <div>{task.title} </div>
+                  <div style={{ fontWeight: 600 }}>{task.title} </div>
                   <div>Priority: {task.priority} </div>
                   <div>Estimated Time: {task.estimatedTime} </div>
                 </div>
